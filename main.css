@@ -5,25 +5,55 @@ body {
     background-size: cover;
     color: #3C3C3C;
   }
-  
+
   .container {
     max-width: 800px;
     margin: auto;
     padding: 2rem;
+    position: relative;
+
   }
-  
+
   h1 {
     text-align: center;
     color: #6C5B7B;
   }
-  
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
   }
-  
+  .postit{
+
+    background: yellow;
+    box-shadow: inset rgb(168, 162, 162) 0px 0px 30px ;
+    width: 150px;
+    height: 150px;
+    text-align: start;
+    position: absolute;
+    padding: 0px 15px;
+    transform: rotate(-25deg);
+    top: 50px;
+    left: -200px;
+    cursor: pointer;
+
+
+
+  }
+  .postit-sombra{
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    box-shadow: 5px 5px 15px black;
+    position: absolute;
+    left: -200px;
+    top: 50px;
+    padding: 0px 15px;
+    transform: rotate(-25deg);
+
+  }
   .item {
     background: #FFF9EF;
     border: 2px dashed #C27BA0;
@@ -32,12 +62,17 @@ body {
     cursor: pointer;
     transition: transform 0.2s;
   }
-  
+  .lista{
+    grid-column: 1/-1;
+    justify-self: center;
+
+  }
+
   .item:hover {
     transform: scale(1.05);
     background-color: #F0A96C33;
   }
-  
+
   .popup {
     display: none;
     position: fixed;
@@ -51,7 +86,7 @@ body {
     z-index: 10;
     max-width: 400px;
   }
-  
+
   .overlay {
     display: none;
     position: fixed;
@@ -62,4 +97,5 @@ body {
     background: rgba(0,0,0,0.5);
     z-index: 5;
   }
-  
+
+ 

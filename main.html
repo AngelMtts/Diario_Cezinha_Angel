@@ -10,32 +10,58 @@
 <body>
     <div class="overlay" id="overlay" onclick="closePopup()"></div>
     <div class="container">
+        <div class="postit-sombra">
+        </div>      
+
+          <div class="postit">
+            <p>Descarta a porra do leite</p>
+
+          </div>
       <h1>🌌 Diário da Missão: Angel & Cezinha</h1>
+
+
       <div class="grid">
         <div class="item" onclick="showPopup('Nossa nave não é nada menos que nossa maravilhosa cabana espacial, espero que se divirta com as próximas etapas bem gays e divertidas.')">
-          💡 Portal da Nave
+          <p>
+           💡 Portal da Nave 
+          </p>
         </div>
-      
+
         <div class="item" onclick="showPopup('Descarta a porra do leite 💀 Nosso maior plano de fuga executado com sucesso.')">
-          🥛 Lembrete
+          <p>
+            🥛 Lembrete
+          </p>
         </div>
-      
+
         <div class="item" onclick="showPopup('Garçom traga a melhor playlist feita pela sua namorada desesperada pra te surpreender.')">
-          🎵 Trilha Sonora Ambiental
+          <p>
+            🎵 Trilha Sonora Ambiental
+          </p>
+        <a href="https://open.spotify.com/playlist/2Txa2sfv2air6IAqzlxZXf?si=FvYgGsMBRAiBsXXXmHtBrw"> </a>
         </div>
-      
+
         <div class="item" onclick="showPopup('A navegante Cezinha irá te entregar um papel que contém as palavras que farão você chorar hoje.')">
+         <p>
           💌 Carta
+         </p> 
         </div>
-      
-        <div class="item" onclick="showPopup(`🍪 Lista de Snacks Espaciais 🍪\n\n🥨 Biscoitos:\n- Cebolitos\n- Lays\n\n🍫 Sobremesa:\n- Palha Italiana (ainda será feita, mas a comandante Cezinha lembra do seu desejo há semanas!)\n\n🥤 Bebidas:\n- Nossas favoritas, sem álcool (espero ter acertado 💖)`)">
-          🗺️ Lista de Snacks
+
+
+        <div class="item lista" onclick="mostrarListaDeSnacks()"> 
+          <p>🗺️ Lista de Snacks</p> </div>
+
+
+          <div class="lista_snack" style="display: none;" >
+
+          </div>
         </div>
       </div>
-      
+
 
     <div class="popup" id="popup"></div>
 
     <script src="main.js"></script>
   </body>
 </html>
+
+ 

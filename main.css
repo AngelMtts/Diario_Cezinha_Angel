@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    background: #F4EBD0 url('https://www.transparenttextures.com/patterns/notebook.png');
+    background-size: cover;
+    color: #3C3C3C;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #6C5B7B;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .item {
+    background: #FFF9EF;
+    border: 2px dashed #C27BA0;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+    background-color: #F0A96C33;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF9EF;
+    border: 2px solid #AA4A44;
+    padding: 2rem;
+    border-radius: 16px;
+    z-index: 10;
+    max-width: 400px;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+  }
+  

@@ -1,101 +1,170 @@
 body {
-    margin: 0;
-    font-family: 'Gloria Hallelujah', cursive;
-    background: #F4EBD0 url('https://www.transparenttextures.com/patterns/notebook.png');
-    background-size: cover;
-    color: #3C3C3C;
+  margin: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  background: #F4EBD0 url('https://www.transparenttextures.com/patterns/notebook.png');
+  background-size: cover;
+  color: #3C3C3C;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #6C5B7B;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.item {
+  background: #FFF9EF;
+  border: 2px dashed #C27BA0;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  background-color: #7e766f33;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFF9EF;
+  border: 2px solid #AA4A44;
+  padding: 2rem;
+  border-radius: 16px;
+  z-index: 10;
+  max-width: 400px;
+  width: 90%;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+#popup button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #055521;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#popup button:hover {
+  background-color: #1e6838;
+}
+
+.postit {
+  background: yellow;
+  box-shadow: inset rgb(168, 162, 162) 0px 0px 30px;
+  width: 150px;
+  height: 150px;
+  text-align: start;
+  position: absolute;
+  padding: 0px 15px;
+  transform: rotate(-25deg);
+  top: 50px;
+  left: -200px;
+  cursor: pointer;
+}
+
+.postit-sombra {
+  height: 150px;
+  width: 150px;
+  background-color: red;
+  box-shadow: 5px 5px 15px black;
+  position: absolute;
+  left: -200px;
+  top: 50px;
+  padding: 0px 15px;
+  transform: rotate(-25deg);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+    padding: 10px;
   }
 
   .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-    position: relative;
-
-  }
-
-  h1 {
-    text-align: center;
-    color: #6C5B7B;
+    padding: 1rem;
   }
 
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
+  .item {
+    padding: 1rem;
+    font-size: 1.1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #popup {
+    padding: 1.5rem;
+  }
+
+  #popup button {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  /* ✅ Post-it visível e adaptado para celular */
   .postit{
-
-    background: yellow;
-    box-shadow: inset rgb(168, 162, 162) 0px 0px 30px ;
-    width: 150px;
-    height: 150px;
-    text-align: start;
-    position: absolute;
-    padding: 0px 15px;
-    transform: rotate(-25deg);
-    top: 50px;
-    left: -200px;
-    cursor: pointer;
-
-
-
+    display: block;
+    position: static;
+    transform: none;
+    margin: 1rem auto;
+    width: 120px;
+    height: 120px;
   }
   .postit-sombra{
-    height: 150px;
-    width: 150px;
-    background-color: red;
-    box-shadow: 5px 5px 15px black;
+    display: block;
     position: absolute;
-    left: -200px;
-    top: 50px;
-    padding: 0px 15px;
-    transform: rotate(-25deg);
+    top:20px;
+    z-index: -1;
+    right:-200px;
+    transform: none;
+    margin: 1rem auto;
+    width: 120px;
+    height: 120px;
+  }
+}
 
-  }
-  .item {
-    background: #FFF9EF;
-    border: 2px dashed #C27BA0;
-    padding: 1rem;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .lista{
-    grid-column: 1/-1;
-    justify-self: center;
 
-  }
 
-  .item:hover {
-    transform: scale(1.05);
-    background-color: #F0A96C33;
-  }
-
-  .popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #FFF9EF;
-    border: 2px solid #AA4A44;
-    padding: 2rem;
-    border-radius: 16px;
-    z-index: 10;
-    max-width: 400px;
-  }
-
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 5;
-  }
 
  

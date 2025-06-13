@@ -1,5 +1,5 @@
 function showPopup(text) {
-    document.getElementById('popup').innerHTML = text; // Corrigido aqui
+    document.getElementById('popup').innerHTML = text; 
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
 }
@@ -19,13 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function mostrarListaDeSnacks() {
     const listaHTML = `
-        <p>🍎 Aqui está a lista de snacks:</p>
+        <p>🍽️ Aqui está a lista de snacks:</p>
         <ul>
-            <li>Biscoito: Cheetos Bola ou Cebolitos/ Lays</li>
+            <li>Biscoito: Cebolitos e Lays</li>
             <li>Palha Italiana: Iremos fazer juntinhas</li>
             <li>Balas Finis: as suas preferidas (menos a da aranha que n tem kk)</li>
-            <li> Bebidas: Monster sem açúcar e Cappucino </li>
+            <li> Bebida: Cappucino </li>
         </ul>
+
+
     `;
     showPopup(listaHTML);
+}
+
+function mostrarTrilhaSonora() {
+  const conteudo = `
+    <p>Garçom traga a melhor playlist feita pela sua namorada desesperada pra te surpreender.</p>
+    <button onclick="window.open('https://open.spotify.com/playlist/2Txa2sfv2air6IAqzlxZXf?si=185NHfyARHeQz5cDrv5k8g', '_blank')">
+      Ouvir Playlist
+    </button>
+  `;
+  showPopup(conteudo);
 }
